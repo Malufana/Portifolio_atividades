@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#topo_cabecalho{
+    background-color: #FFDEAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .nome{
+    font-family: "Grey Qo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+} */
+
+#topo_cabecalho .container{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .logo_container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.logo_container img{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    background-color: #FFDEAD;
+    padding: 25px 0;
+}
+
+.main_aulas{
+    padding-top: 80px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.container-grid {
+    display: flex;
+    column-gap: 16px;
+}
+
+/* .main_aulas div.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+.main_centro{
+    margin: 40px 0px 40px 0px;
+}
+
+.main_titulo{
+    font-family: Signika Negative;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.aula_card {
+    margin-top: 30px;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    box-shadow: 20px 40px 40px 10px rgba(0, 0, 0, 0.099);
+    background-color: #fff;
+}
+
+.aula_card .card_image_container {
+    margin-top: 10px;
+    display: flex;
+    border-color: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    width: 250px;
+    height: 350px;
+}
+
+.card_image_container img{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    object-fit: contain;
+}
+
+.aula_card_title{
+    font-family: Signika Negative;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-style: normal;
+    font-optical-sizing: auto;
+    margin-bottom: 10px;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.aula_card_reference{
+    font-family: Signika Negative;
+    font-size: 15px;
+    font-style: normal;
+    font-optical-sizing: auto;
+    margin-bottom: 10px;
+}
+
+.aula_card_desc{
+    font-family: Signika Negative;
+    font-size: 15px;
+    font-style: normal;
+    font-optical-sizing: auto;
+    margin-bottom: 10px;
+}
+
+.aula_card_btn{
+    border: none;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Signika Negative;
+    cursor: pointer;
+}
+
+.aula_card_btn:hover{
+    background-color: #F0E68C;
+}
+
+.redesSociais{
+    font-family: Signika Negative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.icons-redesSociais{
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons-redesSociais a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+hr{
+    border: solid 1px;
+}
