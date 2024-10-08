@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Desafio</title>
+    <link rel="stylesheet" href="../portifolio/styles.css">
+    <link rel="shortcut icon" href="../imgs/fundoPreto_anaMaluf.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="topo_cabecalho">
+            <div class="container">
+                <div class="logo_container">
+                    <div class="grid">
+                        <a href="../portifolio/index.html">
+                            <img src="../imgs/anaMaluf.png" alt="">
+                        </a>
+                        <!-- <h2 class="nome">Ana Maluf</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main"> 
+        <div class="container">
+            <div class="img">
+                <img src="../imgs/desafio_atts.png" alt="">
+            </div>
+            <div class="botoes">
+                <button id="ex1" class="buttons">Exercicio 1</button>
+                <button id="ex2" class="buttons">Exercicio 2</button>
+                <button id="ex3" class="buttons">Exercicio 3</button>
+            </div>
+            
+            <p id="mostrar"></p>
+            
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="redesSociais">
+                <!-- <h5>REDES SOCIAIS</h5> -->
+                <hr>
+                <div class="icons-redesSociais">
+                    <a href="mailto:anaaurelio-maluf@hotmail.com">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/maluf_ana/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ana-beatriz-maluf-386a5928a/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/Malufana">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //Exercicio 1
+        document.getElementById("ex1").addEventListener("click", function(){
+            var n1 = Number(window.prompt("Digite um número de 1 a 10"));
+            var aux = 0;
+
+            if(n1 <= 10){
+                document.getElementById("mostrar").textContent = "TABUADA DO " + n1
+                // document.write(`TABUADA DO ${n1} <br> <br>`);
+            for(i = 0; i < 11; i++){
+                var mult = n1 * aux;
+                document.getElementById("mostrar").textContent = n1 + " * " +  aux  + " = " + mult
+                // document.write(` <br> ${n1} * ${aux} = ${mult}`);
+                aux++;
+            }
+        }});
+        
+        //Exercicio 2
+        document.getElementById("ex2").addEventListener("click", function(){
+            alert("Vamos jogar pedra, papel e tesoura");
+            alert("Você será PEDRA");
+            
+            var jogo = ["PEDRA", "PAPEL", "TESOURA"]
+            console.log(jogo)
+            var jogada = Math.floor(Math.random() * jogo.length >> 0);
+            console.log(jogada)
+
+            if(jogada == 1){
+                alert("Computador jogou PEDRA");
+                alert("JOGO EMPATOU");
+            }else if(jogada == 2){
+                alert("Computador jogou PAPEL");
+                alert("COMPUTADOR VENCEU");
+            } else if(jogada == 3){
+                alert("Computador jogou TESOURA");
+                alert("VOCÊ VENCEU");
+            }
+        }); 
+
+        //Exercicio 3
+        document.getElementById("ex3").addEventListener("click", function(){
+            var num = Number(window.prompt("Digite um número"));
+            var num1 = num
+
+            // document.write(`O Fatorial de ${num} é <br>`)
+            for(i = num - 1; i >= 1; i--){
+                num *= i;
+            }
+            document.getElementById("mostrar").textContent = "O Fatorial de " + num1 + " é " + num
+            // document.getElementById("mostrar").textContent = num
+
+            // document.write(num)
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios 1 ao 5</title>
+    <link rel="stylesheet" href="../portifolio/styles.css">
+    <link rel="shortcut icon" href="../imgs/fundoPreto_anaMaluf.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="topo_cabecalho">
+            <div class="container">
+                <div class="logo_container">
+                    <div class="grid">
+                        <a href="../portifolio/index.html">
+                            <img src="../imgs/anaMaluf.png" alt="">
+                        </a>
+                        <!-- <h2 class="nome">Ana Maluf</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="img">
+                <img src="../imgs/operadoresAritmetico_atts.png" alt="">
+            </div>
+            <div class="botoes">
+                <button id="ex1" class="buttons">Exercicio 1</button>
+                
+                <button id="ex2" class="buttons">Exercicio 2</button>
+                
+                <button id="ex3" class="buttons">Exercicio 3</button>
+                
+                <button id="ex4" class="buttons">Exercicio 4</button>
+                
+                <button id="ex5" class="buttons">Exercicio 5</button>
+                
+            </div>
+            <p id="mostrar"></p>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="redesSociais">
+                <!-- <h5>REDES SOCIAIS</h5> -->
+                <hr>
+                <div class="icons-redesSociais">
+                    <a href="mailto:anaaurelio-maluf@hotmail.com">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/maluf_ana/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ana-beatriz-maluf-386a5928a/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/Malufana">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        //Exercicio 1
+        document.getElementById("ex1").addEventListener("click", function(){
+            var n1 = Number(window.prompt("Digite número 1"));
+            var n2 = Number(window.prompt("Digite número 2"));
+            var dif = n1 - n2;
+            document.getElementById("mostrar").textContent = "A Diferença entre eles é de " + dif;
+            // document.write(`<br> A diferença entre eles é ${dif}`);
+        });
+        
+        //Exercicio 2
+        document.getElementById("ex2").addEventListener("click", function(){
+            var numero = Number(window.prompt("Digite um número"));
+            if(numero % 2 == 0){
+                document.getElementById("mostrar").textContent = "O número digitado é par!"
+                // document.write("<br> O número digitado é par!");
+            }else{
+                document.getElementById("mostrar").textContent = "O número digitado não é par!"
+                // document.write("<br> O número digitado não é par!");
+            }
+        });
+        
+        //Exercicio 3
+        document.getElementById("ex3").addEventListener("click", function(){
+            var nota1 = Number(window.prompt("Digite a primeira nota"));
+            var nota2 = Number(window.prompt("Digite a segunda nota"));
+            if(nota1 % nota2 == 0){
+                document.getElementById("mostrar").textContent = "A primeira nota é múltipla da segunda"
+                // document.write("<br> A primeira nota é múltipla da segunda");
+            }else{
+                document.getElementById("mostrar").textContent = "A primeira nota não é múltipla da segunda"
+                // document.write("<br> A primeira nota não é múltipla da segunda");
+            }
+        });
+        
+        //Execicio 4
+        document.getElementById("ex4").addEventListener("click", function(){
+            var cel = Number(window.prompt("Digite uma temperatura em Celsius"));
+            var fah = (cel * (9 / 5)) + 32;
+            document.getElementById("mostrar").textContent = "A temperatura em Fahrenheit é " + fah
+            // document.write(`<br> A Temperatura em Fahrenheit é ${fah}`);
+        });
+
+        //Execicio 5
+        document.getElementById("ex5").addEventListener("click", function(){
+            var base = Number(window.prompt("Digite a base da sua área"));
+            var altura = Number(window.prompt("Digite a altura da sua área"));
+            var area = base * altura;
+            document.getElementById("mostrar").textContent = "A área é " + area + "m^2"
+            // document.write(`<br> A área é ${area} m^2`);
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Função</title>
+</head>
+<body>
+    <script>
+        //Função: Trecho de codigo que são executados a medida da necessidade
+
+        //Saudação - Bloco de codigo que falo o que deve ser feito
+        function saudacao(){
+            alert("Olá, Bem vindo a aula de JS, já estava com saudades de vocês!");
+        }
+
+        function somar(a, b){
+            return a + b;
+        }
+
+        //Caso o parametro não seja enviado, eu tenho um valor default que é o 0
+        function somarVarios(n1 = 0, n2 = 0, n3 = 0, n4 = 0){
+            return n1 + n2 + n3 + n4;
+        }
+
+        //Chamando a Funcao para que ela seja executada
+        saudacao();
+
+        //Chamndo a funcao somar e guardando numa variavel
+        var resultadoSoma = somar(3, 5);
+        alert(resultadoSoma);
+
+        var somarVarios = somarVarios(1, 2 ,3, 4);
+        alert(somarVarios);
+    </script>
+</body>
+</html>

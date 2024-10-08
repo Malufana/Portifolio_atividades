@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Fixacao</title>
+    <link rel="stylesheet" href="../portifolio/styles.css">
+    <link rel="shortcut icon" href="../imgs/fundoPreto_anaMaluf.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="topo_cabecalho">
+            <div class="container">
+                <div class="logo_container">
+                    <div class="grid">
+                        <a href="../portifolio/index.html">
+                            <img src="../imgs/anaMaluf.png" alt="">
+                        </a>
+                        <!-- <h2 class="nome">Ana Maluf</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="img">
+                <img src="../imgs/fixacao_atts.png" alt="">
+            </div>
+            <div class="botoes">
+                <button id="ex1" class="buttons">Exercicio 1</button>
+                <button id="ex2" class="buttons">Exercicio 2</button>
+                <button id="ex3" class="buttons">Exercicio 3</button>
+                <button id="ex4" class="buttons">Exercicio 4</button>
+            </div>
+
+            <p id="mostrar"></p>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="redesSociais">
+                <!-- <h5>REDES SOCIAIS</h5> -->
+                <hr>
+                <div class="icons-redesSociais">
+                    <a href="mailto:anaaurelio-maluf@hotmail.com">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/maluf_ana/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ana-beatriz-maluf-386a5928a/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/Malufana">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //Exercicio 1
+        document.getElementById("ex1").addEventListener("click", function(){
+            var nota1 = Number(window.prompt("Por favor, informe a primeira nota"))
+            var nota2 = Number(window.prompt("Por favor, informe a segunda nota"))
+            var media = (nota1 + nota2) / 2
+
+            if(nota1 % 2 == 0 | nota2 % 2 == 0){
+                document.getElementById("mostrar").textContent = "Uma das notas é par"
+                // document.write(" <br> Uma das notas é par!")
+                if(media >= 6){
+                    document.getElementById("mostrar").textContent = "Está acima da Média!"
+                    // document.write(" <br> Está acima da Média!")
+                }else{
+                    document.getElementById("mostrar").textContent = "Não está na Média!"
+                    // document.write(" <br> Não está na Média!")
+                }
+            }
+        });
+        
+        //Exercicio 2
+        document.getElementById("ex2").addEventListener("click", function(){
+            var peso = Number(window.prompt("Insira seu peso"))
+            var altura = Number(window.prompt("Insira sua altura"))
+            var imc = (peso / (altura * altura))
+
+            if(imc < 18.5){
+                document.getElementById("mostrar").textContent = "Você está com magreza extrema!"
+                // document.write(" <br> Você está com magreza extrema!")
+            }else if(imc >= 18.6 && imc <= 24.9){
+                document.getElementById("mostrar").textContent = "Você está normal!"
+                // document.write(" <br> Você está normal!")
+            }else if(imc >= 25 && imc <= 29.9){
+                document.getElementById("mostrar").textContent = "Você está com sobrepeso!"
+                // document.write(" <br> Você está com sobrepeso!")
+            }else if(imc >= 30 && imc <= 34.9){
+                document.getElementById("mostrar").textContent = "Você está com obesidade grau I!"
+                // document.write(" <br> Você está com obesidade grau I!")
+            }else if(imc >= 35 && imc <= 39.9){
+                document.getElementById("mostrar").textContent = "Você está com obesidade grau II!"
+                // document.write(" <br> Você está com obesidade grau II!")
+            }else if(imc >40){
+                document.getElementById("mostrar").textContent = "Você está com obesidade grau III!"
+                // document.write(" <br> Você está com obesidade grau III!")
+            }else{
+                document.getElementById("mostrar").textContent = "erro!"
+                // document.write(" <br> erro!")
+            }
+        });
+        
+        //Exercicio 3
+        document.getElementById("ex3").addEventListener("click", function(){
+            var ano = Number(window.prompt("Digite um ano"))
+
+            if(ano % 4 == 0){
+                document.getElementById("mostrar").textContent = "O ano é bissexto!"
+                // document.write(" <br> O ano é bissexto!")
+            }else{
+                document.getElementById("mostrar").textContent = "O ano não é bissexto!"
+                // document.write(" <br> O ano não é bissexto!")
+            }
+        });
+        
+        //Exercicio 4
+        document.getElementById("ex4").addEventListener("click", function(){
+            var taxa = Number(window.prompt("Digite a taxa de câmbio"))
+            var valor = Number(window.prompt("Digite um valor desejado"))
+            var convertido = valor / taxa
+
+            document.getElementById("mostrar").textContent = "O valor convertido com a taxa é de" + convertido
+            // document.write(` <br> O valor convertido com a taxa é de ${convertido}`)
+        });
+        
+    </script>
+</body>
+</html>

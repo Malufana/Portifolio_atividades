@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Informática</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div id="topo_cabecalho"></div>
+            <div class="logo_container">
+                <div class="grid">
+                    <a href="../portifolio/index.html">
+                        <img src="../imgs/anaMaluf.png" alt="">
+                    </a>
+                </div>
+            </div>   
+    </header>
+
+    <main>
+        <div class="conteiner">
+            <h1>CURSOS DE INFORMÁTICA</h1>
+            <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+            <div class="product">
+                <img src="../imgs/htmlLogo-removebg-preview (1).png" alt="">
+                <h3>Curso de HTML</h3>
+                <div class="quantidade">
+                    <button onclick="decrementa(this)"> - </button>
+                    <input type="number" id="quantidade1" value="0" min="0" max="30">
+                    <button onclick="acrescenta(this)"> + </button>
+                </div>
+                <div class="total">Total: R$<span id="total1">0</span></div>
+            </div>
+
+            <div class="product">
+                <img src="../imgs/javaScripts-removebg-preview 1.png" alt="">
+                <h3>Curso de JAVASCRIPT</h3>
+                <div class="quantidade">
+                    <button onclick="decrementa(this)"> - </button>
+                    <input type="number" id="quantidade2" value="0" min="0" max="30">
+                    <button onclick="acrescenta(this)"> + </button>
+                </div>
+                <div class="total">Total: R$<span id="total2">0</span></div>
+            </div>
+
+            <div class="product">
+                <img src="../imgs/javaLogo-removebg-preview (1).png" alt="">
+                <h3>Curso de JAVA</h3>
+                <div class="quantidade">
+                    <button onclick="decrementa(this)"> - </button>
+                    <input type="number" id="quantidade3" value="0" min="0" max="30">
+                    <button onclick="acrescenta(this)"> + </button>
+                </div>
+                <div class="total">Total: R$<span id="total3">0</span></div>
+            </div>
+
+            <div class="checkout">
+                <h2>Resumo do Pedido</h2>
+                <div class="item">Quantidade Total dos Produtos: <span id="quantidadeProdutos">0</span></div>
+                <div class="item">Valor a Pagar R$<span id="valorAPagar">0</span></div>
+            </div>
+        </div>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>

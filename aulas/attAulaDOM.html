@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projetos Ana Maluf - Aula DOM</title>
+        <link rel="stylesheet" href="../portifolio/styles.css">
+        <link rel="shortcut icon" href="../imgs/fundoPreto_anaMaluf.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <div id="topo_cabecalho">
+            <div class="container">
+                <div class="logo_container">
+                    <div class="grid">
+                        <a href="../portifolio/index.html">
+                            <img src="../imgs/anaMaluf.png" alt="">
+                        </a>
+                        <!-- <h2 class="nome">Ana Maluf</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="blocoAtividade">
+            <div class="ex1">
+                <p id="text">MUDANDO O TEXTO</p>
+                <button id="button">CLIQUE</button>
+            </div>
+
+            <div class="ex1">
+                <p>Clique no botão</p>
+                <p id="contador">0</p>
+                <button id="botao">CLIQUE</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="redesSociais">
+                <!-- <h5>REDES SOCIAIS</h5> -->
+                <hr>
+                <div class="icons-redesSociais">
+                    <a href="mailto:anaaurelio-maluf@hotmail.com">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/maluf_ana/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ana-beatriz-maluf-386a5928a/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/Malufana">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let count = 0;
+        document.getElementById("button").addEventListener("click", function() {
+            if(count % 2 == 0){
+                document.getElementById("text").innerText = "JAVASCRIPT COM DOM";
+                count++
+            }else{
+                document.getElementById("text").innerText = "MUDANDO O TEXTO";
+                count++
+            }
+            
+        })
+
+        document.getElementById("botao").addEventListener("click", function(){
+            count++;
+            document.getElementById("contador").innerText = count
+        })
+    </script>
+</body>
+</html>

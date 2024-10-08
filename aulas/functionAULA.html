@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>TESTE</h1>
+    <script>
+        let nome = "Ana Maluf";
+        let salario = 1400;
+        let salarioAnual = salario * 12;
+
+        json()
+        function json(){
+            let dados = {
+                Nome: nome,
+                Salario: salario,
+                RendimentoAnual: salarioAnual
+            }
+
+            let dadosJSON = JSON.stringify(dados);
+            document.write(dadosJSON);
+        }
+
+        conersao()
+        function conversao(){
+            let celsius = 32;
+            let result = celsius * 9/5 + 32;
+
+            document.write(`<br>A temperatura em fahrenheit é: ${result}`);
+        }
+    </script>
+</body>
+</html>

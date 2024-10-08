@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+
+<body>
+    <h1>Olá Mundo!</h1>
+    <h3>Minha Primeira aula de HTML e JS</h3>
+
+    <script>
+        //alert é para exibir uma mensagem(print)
+        window.alert("Olá eu sou o JavaScript, prazer!")
+        //pergunta algo podendo confirmar ou cancelar
+        window.confirm("Você está gostando de FrontEnd, né?")
+        //pergunta algo para o usuário escrever
+        //var é a primeira forma de declarar variavel, mas foi substituida por let e const, porem em maquinas antigas é preferivel que use var
+        //declaro uma variavel nome que recebe o que for digitado no prompt
+        var nome = window.prompt("Qual o seu nome?")
+
+        //Quando tenho só uma frase, posso usar aspas, mas se quero interpolar texto com variavel, uso crase em volta da frase
+        document.write("Bem Vindo!")
+        document.write(`Olá ${nome}, que saudades de Você.
+        <br>Bora para mais um semestre cheio de aventuras!`)
+
+        //Exemplo de Média
+        //Declarei duas variaveis para obter as notas
+        //O Number converte o valor informado pelo usuario, para um valor numerico
+        var nota1 = Number(window.prompt("Por favor, informe a primeira nota"))
+        var nota2 = Number(window.prompt("Por favor, informe a segunda nota"))
+
+        var qtdAulas = Number(window.prompt("Qual a quantidade de aulas dessa matéria?"))
+        var qtdFaltas = Number(window.prompt("Qual a quantidade de faltas?"))
+
+        var opcao = Number(window.prompt("Digite 1 - Média 2 - Quantidade de Aulas 3 - Aprovação por Faltas"))
+
+        //Uma forma de tomada de decisão
+        switch (opcao) {
+            case 1:
+                //Declarei uma variavel para obter o resultado da média das notas
+                var media = (nota1 + nota2) / 2
+                document.write(`<br> ${nome}, sua média é de ${media}`)
+                if(media >= 6){
+                    document.write("<br> Você está aprovado, Parabéns!!")
+                }else{
+                    document.write("<br> Você está reprovado, Tente novamente!")
+                }
+                break;
+
+            case 2:
+                document.write(`<br> Essa matéria teve ${qtdAulas} aulas ao longo do Semestre`)
+                break;
+
+            case 3:
+                var perFaltas = qtdAulas * 0.25
+
+                if(qtdFaltas == 0){
+                    document.write("<br> Você agora só precisa tirar nota acima de 95%")
+                }else if(qtdFaltas > perFaltas){
+                    document.write("<br> Você reprovou por falta")
+                    console.log(`Quantidade de Faltas ${qtdFaltas}, percentual ${perFaltas}`)
+                }else{
+                    document.write("<br> Você está dentro do percentual permitido")
+                }
+                break;
+            default:
+                break;
+        }
+
+        //Laços de Repetição
+        //For - Usado quando sei o limite de vezes a ser executado
+
+        for(let i = 1; i <= 10; i++){
+            console.log(i);
+        }
+        
+        //While - Uso quando tenho um condicional que me faz parar, no caso um limite
+        let contador = 20
+        let limite = 50
+
+        while(contador <= limite){
+            console.log(`Numero atual ${contador}`)
+            contador ++
+        }
+
+        //DO While - É executado pelo menos uma vez obrigatoriamente e depois valida a condicional
+        let impar = 100
+        do {
+            if(impar % 2 != 0 ){
+                console.log(impar)
+            }
+            impar ++
+        } while (impar <= 150);
+        
+    </script>
+</body>
+</html>
